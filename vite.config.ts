@@ -5,7 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/pr-tracker/',
+  base: '/Personal-Best-Tracker/',
   plugins: [
     react(),
     VitePWA({
@@ -15,8 +15,8 @@ export default defineConfig({
         name: 'PR Tracker',
         short_name: 'PR Tracker',
         description: 'Gamified personal record tracker for fitness',
-        start_url: '/pr-tracker/',
-        scope: '/pr-tracker/',
+        start_url: '/Personal-Best-Tracker/',
+        scope: '/Personal-Best-Tracker/',
         display: 'standalone',
         orientation: 'portrait',
         theme_color: '#0a0e1a',

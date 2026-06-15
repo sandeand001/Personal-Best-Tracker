@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-App at <http://localhost:5173/pr-tracker/>.
+App at <http://localhost:5173/Personal-Best-Tracker/>.
 
 ## Test & build
 
@@ -26,13 +26,13 @@ npm run build:pages # production bundle + 404.html SPA fallback for GitHub Pages
 1. Push the repo to GitHub.
 2. Repository Settings → Pages → **Source = "GitHub Actions"**.
 3. Push to `main` (or `master`); the workflow at `.github/workflows/deploy.yml` builds and deploys.
-4. Live at `https://<username>.github.io/pr-tracker/`.
+4. Live at `https://sandeand001.github.io/Personal-Best-Tracker/`.
 
-If you change the repo name from `pr-tracker`, update the `base` in `vite.config.ts` and the `start_url`/`scope` in the PWA manifest.
+If you change the repo name, update the `base` in `vite.config.ts` and the `start_url`/`scope` in the PWA manifest.
 
 ## Custom domain
 
-Add `public/CNAME` containing your domain, then change `vite.config.ts` `base` from `/pr-tracker/` to `/`, and update PWA `start_url`/`scope` likewise.
+Add `public/CNAME` containing your domain, then change `vite.config.ts` `base` from `/Personal-Best-Tracker/` to `/`, and update PWA `start_url`/`scope` likewise.
 
 ## Architecture
 
