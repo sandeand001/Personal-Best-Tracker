@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppStore, regionPercentileFor, regionTier } from "../../app/store";
 import type { MuscleGroup, StatTab } from "../../domain/types";
-import { AvatarSVG } from "../../components/AvatarSVG";
+import { AvatarBody } from "../../components/AvatarBody";
 import { TierBadge } from "../../components/TierBadge";
 import { StatBar } from "../../components/StatBar";
 import { nextTierThreshold } from "../../domain/tiers";
@@ -68,12 +68,11 @@ export function AvatarPage() {
         <EngineView tab={tab} />
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-4">
-          <div className="aspect-[1/2] max-w-xs mx-auto">
-            <AvatarSVG
+          <div className="max-w-xs mx-auto">
+            <AvatarBody
               view={view}
               regionPercentiles={regionPcts}
               onRegionClick={(r) => navigate(`/region/${r}`)}
-              tab={tab}
             />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-1 gap-2 sm:max-w-xs">
