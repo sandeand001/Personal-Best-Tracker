@@ -50,7 +50,7 @@ export type ExerciseCategory = "strength" | "cardio" | "time-hold";
 export type StatTab = "true" | "e1rm";
 export type WeightUnit = "lb" | "kg";
 export type DistanceUnit = "mi" | "km";
-export type Theme = "light" | "dark" | "techno" | "fantasy" | "system";
+export type Theme = "light" | "dark" | "techno" | "system";
 
 export type PRSlot = string;
 

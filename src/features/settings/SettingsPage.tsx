@@ -69,7 +69,7 @@ export function SettingsPage() {
 
       <Section title="Theme">
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
-          {(["light", "dark", "techno", "fantasy", "system"] as Theme[]).map((t) => (
+          {(["light", "dark", "techno", "system"] as Theme[]).map((t) => (
             <button
               key={t}
               onClick={() => updateSettings({ theme: t })}
