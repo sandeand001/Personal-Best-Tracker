@@ -1,0 +1,64 @@
+{
+  "exerciseId": "bike-longest-ride",
+  "direction": "asc",
+  "points": [
+    {
+      "value": 2000,
+      "percentile": 1
+    },
+    {
+      "value": 5000,
+      "percentile": 5
+    },
+    {
+      "value": 10000,
+      "percentile": 10
+    },
+    {
+      "value": 16000,
+      "percentile": 20
+    },
+    {
+      "value": 22000,
+      "percentile": 30
+    },
+    {
+      "value": 30000,
+      "percentile": 40
+    },
+    {
+      "value": 40000,
+      "percentile": 50
+    },
+    {
+      "value": 55000,
+      "percentile": 60
+    },
+    {
+      "value": 75000,
+      "percentile": 70
+    },
+    {
+      "value": 100000,
+      "percentile": 80
+    },
+    {
+      "value": 140000,
+      "percentile": 90
+    },
+    {
+      "value": 180000,
+      "percentile": 95
+    },
+    {
+      "value": 250000,
+      "percentile": 99
+    },
+    {
+      "value": 400000,
+      "percentile": 99.9
+    }
+  ],
+  "source": "Curated estimate of longest single cycling distance among healthy adults.",
+  "confidence": "curated"
+}

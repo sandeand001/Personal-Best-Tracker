@@ -1,0 +1,64 @@
+{
+  "exerciseId": "run-10K",
+  "direction": "desc",
+  "points": [
+    {
+      "value": 6698.69,
+      "percentile": 1
+    },
+    {
+      "value": 5741.74,
+      "percentile": 5
+    },
+    {
+      "value": 5263.26,
+      "percentile": 10
+    },
+    {
+      "value": 4784.78,
+      "percentile": 20
+    },
+    {
+      "value": 4511.36,
+      "percentile": 30
+    },
+    {
+      "value": 4272.13,
+      "percentile": 40
+    },
+    {
+      "value": 4101.24,
+      "percentile": 50
+    },
+    {
+      "value": 3964.53,
+      "percentile": 60
+    },
+    {
+      "value": 3827.82,
+      "percentile": 70
+    },
+    {
+      "value": 3691.12,
+      "percentile": 80
+    },
+    {
+      "value": 3383.52,
+      "percentile": 90
+    },
+    {
+      "value": 3178.46,
+      "percentile": 95
+    },
+    {
+      "value": 2802.51,
+      "percentile": 99
+    },
+    {
+      "value": 2437.96,
+      "percentile": 99.9
+    }
+  ],
+  "source": "ACSM cardiovascular fitness norms for adults 30-39 (1.5-mile run percentile times), sex-pooled 50/50; longer distances extrapolated via standard pace decay (~3% per doubling of distance for trained runners, more for untrained).",
+  "confidence": "curated"
+}

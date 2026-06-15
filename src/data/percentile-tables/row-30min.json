@@ -1,0 +1,64 @@
+{
+  "exerciseId": "row-30min",
+  "direction": "asc",
+  "points": [
+    {
+      "value": 3500,
+      "percentile": 1
+    },
+    {
+      "value": 4500,
+      "percentile": 5
+    },
+    {
+      "value": 5000,
+      "percentile": 10
+    },
+    {
+      "value": 5600,
+      "percentile": 20
+    },
+    {
+      "value": 6000,
+      "percentile": 30
+    },
+    {
+      "value": 6300,
+      "percentile": 40
+    },
+    {
+      "value": 6600,
+      "percentile": 50
+    },
+    {
+      "value": 6850,
+      "percentile": 60
+    },
+    {
+      "value": 7100,
+      "percentile": 70
+    },
+    {
+      "value": 7350,
+      "percentile": 80
+    },
+    {
+      "value": 7700,
+      "percentile": 90
+    },
+    {
+      "value": 7950,
+      "percentile": 95
+    },
+    {
+      "value": 8350,
+      "percentile": 99
+    },
+    {
+      "value": 8800,
+      "percentile": 99.9
+    }
+  ],
+  "source": "Curated 30-min erg meters for healthy adults.",
+  "confidence": "curated"
+}

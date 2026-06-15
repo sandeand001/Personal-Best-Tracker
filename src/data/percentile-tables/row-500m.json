@@ -1,0 +1,64 @@
+{
+  "exerciseId": "row-500m",
+  "direction": "desc",
+  "points": [
+    {
+      "value": 153.0,
+      "percentile": 1
+    },
+    {
+      "value": 140.25,
+      "percentile": 5
+    },
+    {
+      "value": 130.69,
+      "percentile": 10
+    },
+    {
+      "value": 121.12,
+      "percentile": 20
+    },
+    {
+      "value": 114.75,
+      "percentile": 30
+    },
+    {
+      "value": 110.5,
+      "percentile": 40
+    },
+    {
+      "value": 106.25,
+      "percentile": 50
+    },
+    {
+      "value": 103.06,
+      "percentile": 60
+    },
+    {
+      "value": 99.88,
+      "percentile": 70
+    },
+    {
+      "value": 96.69,
+      "percentile": 80
+    },
+    {
+      "value": 92.44,
+      "percentile": 90
+    },
+    {
+      "value": 89.25,
+      "percentile": 95
+    },
+    {
+      "value": 83.94,
+      "percentile": 99
+    },
+    {
+      "value": 78.62,
+      "percentile": 99.9
+    }
+  ],
+  "source": "Derived from 2K row pace \u00d7 distance scaling.",
+  "confidence": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "exerciseId": "row-5K",
+  "direction": "desc",
+  "points": [
+    {
+      "value": 1980.0,
+      "percentile": 1
+    },
+    {
+      "value": 1815.0,
+      "percentile": 5
+    },
+    {
+      "value": 1691.25,
+      "percentile": 10
+    },
+    {
+      "value": 1567.5,
+      "percentile": 20
+    },
+    {
+      "value": 1485.0,
+      "percentile": 30
+    },
+    {
+      "value": 1430.0,
+      "percentile": 40
+    },
+    {
+      "value": 1375.0,
+      "percentile": 50
+    },
+    {
+      "value": 1333.75,
+      "percentile": 60
+    },
+    {
+      "value": 1292.5,
+      "percentile": 70
+    },
+    {
+      "value": 1251.25,
+      "percentile": 80
+    },
+    {
+      "value": 1196.25,
+      "percentile": 90
+    },
+    {
+      "value": 1155.0,
+      "percentile": 95
+    },
+    {
+      "value": 1086.25,
+      "percentile": 99
+    },
+    {
+      "value": 1017.5,
+      "percentile": 99.9
+    }
+  ],
+  "source": "Derived from 2K row pace \u00d7 distance scaling.",
+  "confidence": "curated"
+}

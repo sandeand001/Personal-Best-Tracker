@@ -1,0 +1,64 @@
+{
+  "exerciseId": "chin-up-weighted",
+  "direction": "asc",
+  "points": [
+    {
+      "value": 9.67,
+      "percentile": 1
+    },
+    {
+      "value": 11.73,
+      "percentile": 5
+    },
+    {
+      "value": 12.88,
+      "percentile": 10
+    },
+    {
+      "value": 14.88,
+      "percentile": 20
+    },
+    {
+      "value": 15.91,
+      "percentile": 30
+    },
+    {
+      "value": 16.73,
+      "percentile": 40
+    },
+    {
+      "value": 17.8,
+      "percentile": 50
+    },
+    {
+      "value": 18.85,
+      "percentile": 60
+    },
+    {
+      "value": 20.12,
+      "percentile": 70
+    },
+    {
+      "value": 21.5,
+      "percentile": 80
+    },
+    {
+      "value": 23.71,
+      "percentile": 90
+    },
+    {
+      "value": 25.94,
+      "percentile": 95
+    },
+    {
+      "value": 28.44,
+      "percentile": 99
+    },
+    {
+      "value": 32.29,
+      "percentile": 99.9
+    }
+  ],
+  "source": "ACSM Guidelines for Exercise Testing & Prescription / NSCA Essentials norms for healthy adults age 30-39, sex-pooled 50/50; raw weight anchored at US adult average bodyweight (M=90.7 kg, F=77.6 kg); non-bench lifts derived via standard strength-training ratios (Rippetoe, NSCA).",
+  "confidence": "curated"
+}

@@ -3,7 +3,7 @@ import { lookupPercentile } from "../domain/percentiles/lookup";
 import { tierForPercentile } from "../domain/tiers";
 import type { Entry, ExerciseDef, PRRecord } from "../domain/types";
 import { resolvePercentileExerciseId } from "../domain/exercises/variants";
-import { STUB_PERCENTILE_TABLES } from "../data/seed/stub-percentiles";
+import { PERCENTILE_TABLES } from "../data/seed/percentile-registry";
 import { EXERCISE_TO_CARDIO_SLOT } from "../data/seed/exercises";
 import { bestForExerciseSlot } from "./store";
 
@@ -50,7 +50,7 @@ export function buildPRFromEntry(
 
   // Compute percentile/tier for both stat tabs
   const tableExId = resolvePercentileExerciseId(def);
-  const table = tableExId ? STUB_PERCENTILE_TABLES[tableExId] : null;
+  const table = tableExId ? PERCENTILE_TABLES[tableExId] : null;
 
   let percentileTrue: number | undefined;
   let percentileE1rm: number | undefined;

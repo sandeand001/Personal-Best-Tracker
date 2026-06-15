@@ -1,0 +1,64 @@
+{
+  "exerciseId": "run-half-marathon",
+  "direction": "desc",
+  "points": [
+    {
+      "value": 15159.25,
+      "percentile": 1
+    },
+    {
+      "value": 12993.64,
+      "percentile": 5
+    },
+    {
+      "value": 11910.84,
+      "percentile": 10
+    },
+    {
+      "value": 10828.03,
+      "percentile": 20
+    },
+    {
+      "value": 10209.29,
+      "percentile": 30
+    },
+    {
+      "value": 9667.89,
+      "percentile": 40
+    },
+    {
+      "value": 9281.17,
+      "percentile": 50
+    },
+    {
+      "value": 8971.8,
+      "percentile": 60
+    },
+    {
+      "value": 8662.43,
+      "percentile": 70
+    },
+    {
+      "value": 8353.05,
+      "percentile": 80
+    },
+    {
+      "value": 7656.97,
+      "percentile": 90
+    },
+    {
+      "value": 7192.91,
+      "percentile": 95
+    },
+    {
+      "value": 6342.13,
+      "percentile": 99
+    },
+    {
+      "value": 5517.14,
+      "percentile": 99.9
+    }
+  ],
+  "source": "ACSM cardiovascular fitness norms for adults 30-39 (1.5-mile run percentile times), sex-pooled 50/50; longer distances extrapolated via standard pace decay (~3% per doubling of distance for trained runners, more for untrained).",
+  "confidence": "curated"
+}

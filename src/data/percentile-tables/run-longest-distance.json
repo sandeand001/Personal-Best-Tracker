@@ -1,0 +1,64 @@
+{
+  "exerciseId": "run-longest-distance",
+  "direction": "asc",
+  "points": [
+    {
+      "value": 500,
+      "percentile": 1
+    },
+    {
+      "value": 1200,
+      "percentile": 5
+    },
+    {
+      "value": 1800,
+      "percentile": 10
+    },
+    {
+      "value": 2800,
+      "percentile": 20
+    },
+    {
+      "value": 3500,
+      "percentile": 30
+    },
+    {
+      "value": 4200,
+      "percentile": 40
+    },
+    {
+      "value": 5000,
+      "percentile": 50
+    },
+    {
+      "value": 6500,
+      "percentile": 60
+    },
+    {
+      "value": 8000,
+      "percentile": 70
+    },
+    {
+      "value": 10500,
+      "percentile": 80
+    },
+    {
+      "value": 15000,
+      "percentile": 90
+    },
+    {
+      "value": 21097,
+      "percentile": 95
+    },
+    {
+      "value": 42195,
+      "percentile": 99
+    },
+    {
+      "value": 80000,
+      "percentile": 99.9
+    }
+  ],
+  "source": "Curated from general-adult-population running distance distributions.",
+  "confidence": "curated"
+}

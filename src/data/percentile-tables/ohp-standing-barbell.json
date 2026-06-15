@@ -1,0 +1,64 @@
+{
+  "exerciseId": "ohp-standing-barbell",
+  "direction": "asc",
+  "points": [
+    {
+      "value": 23.27,
+      "percentile": 1
+    },
+    {
+      "value": 28.24,
+      "percentile": 5
+    },
+    {
+      "value": 31.02,
+      "percentile": 10
+    },
+    {
+      "value": 35.82,
+      "percentile": 20
+    },
+    {
+      "value": 38.3,
+      "percentile": 30
+    },
+    {
+      "value": 40.28,
+      "percentile": 40
+    },
+    {
+      "value": 42.84,
+      "percentile": 50
+    },
+    {
+      "value": 45.37,
+      "percentile": 60
+    },
+    {
+      "value": 48.44,
+      "percentile": 70
+    },
+    {
+      "value": 51.77,
+      "percentile": 80
+    },
+    {
+      "value": 57.07,
+      "percentile": 90
+    },
+    {
+      "value": 62.46,
+      "percentile": 95
+    },
+    {
+      "value": 68.48,
+      "percentile": 99
+    },
+    {
+      "value": 77.74,
+      "percentile": 99.9
+    }
+  ],
+  "source": "ACSM Guidelines for Exercise Testing & Prescription / NSCA Essentials norms for healthy adults age 30-39, sex-pooled 50/50; raw weight anchored at US adult average bodyweight (M=90.7 kg, F=77.6 kg); non-bench lifts derived via standard strength-training ratios (Rippetoe, NSCA).",
+  "confidence": "curated"
+}

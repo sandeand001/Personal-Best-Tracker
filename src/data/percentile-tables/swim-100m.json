@@ -1,0 +1,64 @@
+{
+  "exerciseId": "swim-100m",
+  "direction": "desc",
+  "points": [
+    {
+      "value": 300,
+      "percentile": 1
+    },
+    {
+      "value": 240,
+      "percentile": 5
+    },
+    {
+      "value": 200,
+      "percentile": 10
+    },
+    {
+      "value": 170,
+      "percentile": 20
+    },
+    {
+      "value": 150,
+      "percentile": 30
+    },
+    {
+      "value": 135,
+      "percentile": 40
+    },
+    {
+      "value": 120,
+      "percentile": 50
+    },
+    {
+      "value": 110,
+      "percentile": 60
+    },
+    {
+      "value": 100,
+      "percentile": 70
+    },
+    {
+      "value": 90,
+      "percentile": 80
+    },
+    {
+      "value": 78,
+      "percentile": 90
+    },
+    {
+      "value": 70,
+      "percentile": 95
+    },
+    {
+      "value": 58,
+      "percentile": 99
+    },
+    {
+      "value": 50,
+      "percentile": 99.9
+    }
+  ],
+  "source": "Curated 100m freestyle for healthy adults; broader than masters-swimmer population.",
+  "confidence": "curated"
+}

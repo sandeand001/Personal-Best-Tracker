@@ -6,7 +6,7 @@ import { DEFAULT_SETTINGS } from "../data/db";
 import { tierForPercentile } from "../domain/tiers";
 import { lookupPercentile } from "../domain/percentiles/lookup";
 import type { PercentileTable } from "../domain/percentiles/types";
-import { STUB_PERCENTILE_TABLES } from "../data/seed/stub-percentiles";
+import { PERCENTILE_TABLES } from "../data/seed/percentile-registry";
 import { SEED_ACHIEVEMENTS } from "../data/seed/achievements";
 import type { AchievementDef } from "../domain/achievements/rules";
 import { evaluateRule } from "../domain/achievements/rules";
@@ -53,7 +53,7 @@ interface AppStore {
 }
 
 function getPercentileTable(exerciseId: string): PercentileTable | null {
-  return STUB_PERCENTILE_TABLES[exerciseId] ?? null;
+  return PERCENTILE_TABLES[exerciseId] ?? null;
 }
 
 export const useAppStore = create<AppStore>((set, get) => ({

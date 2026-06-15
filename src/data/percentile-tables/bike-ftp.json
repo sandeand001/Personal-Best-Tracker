@@ -1,0 +1,64 @@
+{
+  "exerciseId": "bike-ftp",
+  "direction": "asc",
+  "points": [
+    {
+      "value": 50,
+      "percentile": 1
+    },
+    {
+      "value": 75,
+      "percentile": 5
+    },
+    {
+      "value": 95,
+      "percentile": 10
+    },
+    {
+      "value": 120,
+      "percentile": 20
+    },
+    {
+      "value": 140,
+      "percentile": 30
+    },
+    {
+      "value": 155,
+      "percentile": 40
+    },
+    {
+      "value": 170,
+      "percentile": 50
+    },
+    {
+      "value": 185,
+      "percentile": 60
+    },
+    {
+      "value": 205,
+      "percentile": 70
+    },
+    {
+      "value": 230,
+      "percentile": 80
+    },
+    {
+      "value": 265,
+      "percentile": 90
+    },
+    {
+      "value": 300,
+      "percentile": 95
+    },
+    {
+      "value": 350,
+      "percentile": 99
+    },
+    {
+      "value": 400,
+      "percentile": 99.9
+    }
+  ],
+  "source": "Curated from ACSM cycling power norms for healthy adults; raw watts, sex-pooled.",
+  "confidence": "curated"
+}

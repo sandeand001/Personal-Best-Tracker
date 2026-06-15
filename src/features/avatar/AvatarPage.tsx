@@ -72,6 +72,9 @@ export function AvatarPage() {
 
   return (
     <div className="space-y-4">
+      <p className="text-xs text-center" style={{ color: "var(--text-muted)" }}>
+        Percentiles calibrated against healthy adults (ACSM-aligned norms)
+      </p>
       <div className="flex flex-wrap gap-2">
         <Tabs
           options={[

@@ -1,0 +1,64 @@
+{
+  "exerciseId": "row-2K",
+  "direction": "desc",
+  "points": [
+    {
+      "value": 720,
+      "percentile": 1
+    },
+    {
+      "value": 660,
+      "percentile": 5
+    },
+    {
+      "value": 615,
+      "percentile": 10
+    },
+    {
+      "value": 570,
+      "percentile": 20
+    },
+    {
+      "value": 540,
+      "percentile": 30
+    },
+    {
+      "value": 520,
+      "percentile": 40
+    },
+    {
+      "value": 500,
+      "percentile": 50
+    },
+    {
+      "value": 485,
+      "percentile": 60
+    },
+    {
+      "value": 470,
+      "percentile": 70
+    },
+    {
+      "value": 455,
+      "percentile": 80
+    },
+    {
+      "value": 435,
+      "percentile": 90
+    },
+    {
+      "value": 420,
+      "percentile": 95
+    },
+    {
+      "value": 395,
+      "percentile": 99
+    },
+    {
+      "value": 370,
+      "percentile": 99.9
+    }
+  ],
+  "source": "Curated for healthy adults; broader than Concept2 logbook population.",
+  "confidence": "curated"
+}
