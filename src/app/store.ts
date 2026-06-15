@@ -295,6 +295,68 @@ export function regionTier(percentile: number): Tier {
   return tierForPercentile(percentile);
 }
 
+/** Returns the contributing exercise with the highest percentile for the region. */
+export function topContributingExercise(
+  prs: ReadonlyArray<PRRecord>,
+  exercises: ReadonlyArray<ExerciseDef>,
+  region: MuscleGroup,
+  tab: StatTab
+): { exercise: ExerciseDef; percentile: number; bestPR: PRRecord } | null {
+  const contributing = exercises.filter(
+    (e) => e.muscleGroup === region && e.ranked && !e.custom
+  );
+  let best: { exercise: ExerciseDef; percentile: number; bestPR: PRRecord } | null = null;
+  for (const ex of contributing) {
+    const pct = exercisePercentile(prs, exercises, ex.id, tab);
+    if (pct <= 0) continue;
+    if (best && pct <= best.percentile) continue;
+    // Find the actual PR record that drove this percentile.
+    const exPRs = prs.filter((p) => p.exerciseId === ex.id);
+    let topPR: PRRecord | undefined;
+    if (ex.unitMode === "wxr") {
+      if (tab === "true") {
+        topPR = exPRs
+          .filter((p) => p.reps === 1 && p.weightKg != null)
+          .reduce<PRRecord | undefined>(
+            (m, p) => (!m || (p.weightKg ?? 0) > (m.weightKg ?? 0) ? p : m),
+            undefined
+          );
+      } else {
+        topPR = exPRs.reduce<PRRecord | undefined>(
+          (m, p) => (!m || (p.e1rmKg ?? 0) > (m.e1rmKg ?? 0) ? p : m),
+          undefined
+        );
+      }
+    } else if (ex.unitMode === "time-distance" || ex.unitMode === "time") {
+      topPR = exPRs
+        .filter((p) => p.timeSec != null)
+        .reduce<PRRecord | undefined>(
+          (m, p) => (!m || (p.timeSec ?? Infinity) < (m.timeSec ?? Infinity) ? p : m),
+          undefined
+        );
+      if (!topPR) {
+        topPR = exPRs.reduce<PRRecord | undefined>(
+          (m, p) => (!m || (p.distanceM ?? 0) > (m.distanceM ?? 0) ? p : m),
+          undefined
+        );
+      }
+    } else if (ex.unitMode === "watts") {
+      topPR = exPRs.reduce<PRRecord | undefined>(
+        (m, p) => (!m || (p.watts ?? 0) > (m.watts ?? 0) ? p : m),
+        undefined
+      );
+    } else if (ex.unitMode === "duration-hold") {
+      topPR = exPRs.reduce<PRRecord | undefined>(
+        (m, p) => (!m || (p.timeSec ?? 0) > (m.timeSec ?? 0) ? p : m),
+        undefined
+      );
+    }
+    if (!topPR) continue;
+    best = { exercise: ex, percentile: pct, bestPR: topPR };
+  }
+  return best;
+}
+
 // =============== Achievement rule context builder ===============
 
 function buildRuleEvalContext(

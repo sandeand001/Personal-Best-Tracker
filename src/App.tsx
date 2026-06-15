@@ -4,7 +4,6 @@ import { useAppStore } from "./app/store";
 import { ThemeProvider } from "./app/providers/ThemeProvider";
 import { RootLayout } from "./app/layout/RootLayout";
 import { AvatarPage } from "./features/avatar/AvatarPage";
-import { LogPRPage } from "./features/log-pr/LogPRPage";
 import { AchievementsPage } from "./features/achievements/AchievementsPage";
 import { HistoryPage } from "./features/history/HistoryPage";
 import { SettingsPage } from "./features/settings/SettingsPage";
@@ -24,7 +23,6 @@ function App() {
         <Routes>
           <Route element={<RootLayout />}>
             <Route index element={<AvatarPage />} />
-            <Route path="log" element={<LogPRPage />} />
             <Route path="achievements" element={<AchievementsPage />} />
             <Route path="history" element={<HistoryPage />} />
             <Route path="settings" element={<SettingsPage />} />

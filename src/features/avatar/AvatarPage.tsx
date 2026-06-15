@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useAppStore, regionPercentileFor, regionTier } from "../../app/store";
+import { useAppStore, regionPercentileFor, regionTier, topContributingExercise } from "../../app/store";
 import type { MuscleGroup, StatTab } from "../../domain/types";
 import { AvatarBody } from "../../components/AvatarBody";
 import { TierBadge } from "../../components/TierBadge";
@@ -7,6 +7,7 @@ import { StatBar } from "../../components/StatBar";
 import { nextTierThreshold } from "../../domain/tiers";
 import { EngineView } from "./EngineView";
 import { RegionLogModal } from "./RegionLogModal";
+import { formatPRValue } from "../../components/format";
 
 const REGION_LABELS: Record<MuscleGroup, string> = {
   chest: "Chest",
@@ -43,6 +44,7 @@ const BACK_POSITIONS: Record<Exclude<MuscleGroup, "engine">, { top: string; side
 export function AvatarPage() {
   const exercises = useAppStore((s) => s.exercises);
   const prs = useAppStore((s) => s.prs);
+  const settings = useAppStore((s) => s.settings);
   const initialized = useAppStore((s) => s.initialized);
 
   const [tab, setTab] = useState<StatTab>("true");
@@ -107,6 +109,8 @@ export function AvatarPage() {
             {regions.map((r) => {
               const pos = positions[r];
               const pct = regionPcts.get(r) ?? 0;
+              const top = topContributingExercise(prs, exercises, r, tab);
+              const topLabel = top ? `${top.exercise.name} · ${formatPRValue(top.bestPR, top.exercise, settings)}` : undefined;
               return (
                 <button
                   key={r}
@@ -120,7 +124,7 @@ export function AvatarPage() {
                     backdropFilter: "blur(4px)",
                   }}
                 >
-                  <RegionCardContent region={r} percentile={pct} />
+                  <RegionCardContent region={r} percentile={pct} topPRLabel={topLabel} />
                 </button>
               );
             })}
@@ -138,6 +142,8 @@ export function AvatarPage() {
             <div className="grid grid-cols-1 gap-2">
               {regions.map((r) => {
                 const pct = regionPcts.get(r) ?? 0;
+                const top = topContributingExercise(prs, exercises, r, tab);
+                const topLabel = top ? `${top.exercise.name} · ${formatPRValue(top.bestPR, top.exercise, settings)}` : undefined;
                 return (
                   <button
                     key={r}
@@ -145,7 +151,7 @@ export function AvatarPage() {
                     className="text-left rounded-lg p-3 border"
                     style={{ borderColor: "var(--border)", background: "var(--surface)" }}
                   >
-                    <RegionCardContent region={r} percentile={pct} />
+                    <RegionCardContent region={r} percentile={pct} topPRLabel={topLabel} />
                   </button>
                 );
               })}
@@ -163,7 +169,7 @@ export function AvatarPage() {
   );
 }
 
-function RegionCardContent({ region, percentile }: { region: MuscleGroup; percentile: number }) {
+function RegionCardContent({ region, percentile, topPRLabel }: { region: MuscleGroup; percentile: number; topPRLabel?: string }) {
   const tier = regionTier(percentile);
   return (
     <>
@@ -172,12 +178,19 @@ function RegionCardContent({ region, percentile }: { region: MuscleGroup; percen
         {percentile > 0 && <TierBadge tier={tier} size="sm" />}
       </div>
       {percentile > 0 ? (
-        <StatBar
-          percentile={percentile}
-          tier={tier}
-          nextTier={nextTierThreshold(percentile)}
-          showLabel
-        />
+        <>
+          <StatBar
+            percentile={percentile}
+            tier={tier}
+            nextTier={nextTierThreshold(percentile)}
+            showLabel
+          />
+          {topPRLabel && (
+            <p className="text-[11px] mt-1 truncate" style={{ color: "var(--text-muted)" }} title={topPRLabel}>
+              🏆 {topPRLabel}
+            </p>
+          )}
+        </>
       ) : (
         <p className="text-xs" style={{ color: "var(--text-muted)" }}>
           Tap to log a PR.

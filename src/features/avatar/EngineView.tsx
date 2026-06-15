@@ -1,8 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { useAppStore, exercisePercentile, regionTier } from "../../app/store";
-import type { StatTab } from "../../domain/types";
+import type { StatTab, ExerciseDef } from "../../domain/types";
 import { TierBadge } from "../../components/TierBadge";
 import { StatBar } from "../../components/StatBar";
+import { EngineExerciseModal } from "./EngineExerciseModal";
 
 const SPORTS: { id: "run" | "bike" | "row" | "swim"; label: string; icon: string }[] = [
   { id: "run", label: "Run", icon: "🏃" },
@@ -14,7 +15,7 @@ const SPORTS: { id: "run" | "bike" | "row" | "swim"; label: string; icon: string
 export function EngineView({ tab }: { tab: StatTab }) {
   const exercises = useAppStore((s) => s.exercises);
   const prs = useAppStore((s) => s.prs);
-  const navigate = useNavigate();
+  const [pickedExercise, setPickedExercise] = useState<ExerciseDef | null>(null);
 
   return (
     <div className="space-y-4">
@@ -50,7 +51,7 @@ export function EngineView({ tab }: { tab: StatTab }) {
                 return (
                   <button
                     key={ex.id}
-                    onClick={() => navigate(`/exercise/${ex.id}`)}
+                    onClick={() => setPickedExercise(ex)}
                     className="text-left grid grid-cols-[1fr_auto] gap-2 items-center hover:opacity-80"
                   >
                     <div>
@@ -58,7 +59,7 @@ export function EngineView({ tab }: { tab: StatTab }) {
                       {pct > 0 ? (
                         <StatBar percentile={pct} tier={exTier} />
                       ) : (
-                        <div className="text-xs" style={{ color: "var(--text-muted)" }}>—</div>
+                        <div className="text-xs" style={{ color: "var(--text-muted)" }}>Tap to log a PR</div>
                       )}
                     </div>
                     {pct > 0 && <span className="text-xs" style={{ color: "var(--text-muted)" }}>{pct.toFixed(0)}th</span>}
@@ -69,6 +70,8 @@ export function EngineView({ tab }: { tab: StatTab }) {
           </div>
         );
       })}
+
+      <EngineExerciseModal exercise={pickedExercise} onClose={() => setPickedExercise(null)} />
     </div>
   );
 }
