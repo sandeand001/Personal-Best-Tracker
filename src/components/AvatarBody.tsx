@@ -20,7 +20,6 @@ const REGION_TO_SLUGS: Record<Exclude<MuscleGroup, "engine">, Slug[]> = {
   core: ["abs", "obliques"],
 };
 
-/** Slugs that anatomically belong to the back view. */
 const BACK_SLUGS: ReadonlySet<Slug> = new Set([
   "upper-back",
   "lower-back",
@@ -30,7 +29,6 @@ const BACK_SLUGS: ReadonlySet<Slug> = new Set([
   "triceps",
 ]);
 
-/** Slug -> the MuscleGroup that owns it (for click routing). */
 const SLUG_TO_REGION = new Map<Slug, Exclude<MuscleGroup, "engine">>();
 for (const [region, slugs] of Object.entries(REGION_TO_SLUGS) as Array<[
   Exclude<MuscleGroup, "engine">,
@@ -51,6 +49,11 @@ const TIER_COLOR_VAR: Record<string, string> = {
 };
 
 export function AvatarBody({ view, regionPercentiles, onRegionClick }: AvatarBodyProps) {
+  /**
+   * Build the parts list. We include EVERY slug visible on the current view
+   * (even untrained ones) so they're all clickable. Untrained slugs get the
+   * "untrained" color; trained slugs get the tier color.
+   */
   const data = useMemo<ExtendedBodyPart[]>(() => {
     const parts: ExtendedBodyPart[] = [];
     for (const [region, slugs] of Object.entries(REGION_TO_SLUGS) as Array<[
@@ -58,32 +61,28 @@ export function AvatarBody({ view, regionPercentiles, onRegionClick }: AvatarBod
       Slug[]
     ]>) {
       const pct = regionPercentiles.get(region) ?? 0;
-      if (pct <= 0) continue;
-      const tier = tierForPercentile(pct);
-      const color = TIER_COLOR_VAR[tier];
+      const color = pct > 0 ? TIER_COLOR_VAR[tierForPercentile(pct)] : "var(--tier-untrained)";
       for (const slug of slugs) {
         const onBack = BACK_SLUGS.has(slug);
         const onFront = !onBack || slug === "calves";
-        if (view === "front" && onFront) parts.push({ slug, color });
-        if (view === "back" && (onBack || slug === "calves")) parts.push({ slug, color });
+        const visible =
+          (view === "front" && onFront) ||
+          (view === "back" && (onBack || slug === "calves"));
+        if (visible) parts.push({ slug, color });
       }
     }
     return parts;
   }, [view, regionPercentiles]);
 
+  const handlePress = (item: ExtendedBodyPart) => {
+    if (!onRegionClick) return;
+    if (!item.slug) return;
+    const region = SLUG_TO_REGION.get(item.slug);
+    if (region) onRegionClick(region);
+  };
+
   return (
-    <div
-      className="flex justify-center"
-      onClick={(e) => {
-        if (!onRegionClick) return;
-        const target = e.target as SVGElement;
-        const slug = target.getAttribute?.("data-slug") as Slug | null;
-        if (!slug) return;
-        const region = SLUG_TO_REGION.get(slug);
-        if (region) onRegionClick(region);
-      }}
-      style={{ cursor: onRegionClick ? "pointer" : "default" }}
-    >
+    <div className="flex justify-center" style={{ touchAction: "manipulation" }}>
       <Body
         data={data}
         side={view}
@@ -91,6 +90,7 @@ export function AvatarBody({ view, regionPercentiles, onRegionClick }: AvatarBod
         border="none"
         scale={1.4}
         defaultFill="var(--tier-untrained)"
+        onBodyPartPress={onRegionClick ? handlePress : undefined}
       />
     </div>
   );

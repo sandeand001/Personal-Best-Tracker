@@ -10,6 +10,7 @@ import { SettingsPage } from "./features/settings/SettingsPage";
 import { RegionDetailPage } from "./features/region/RegionDetailPage";
 import { ExerciseDetailPage } from "./features/exercise/ExerciseDetailPage";
 import { PRCelebrationModal } from "./features/pr-celebration/PRCelebrationModal";
+import { ServiceWorkerUpdater } from "./app/ServiceWorkerUpdater";
 
 function App() {
   const init = useAppStore((s) => s.init);
@@ -32,6 +33,7 @@ function App() {
           </Route>
         </Routes>
         <PRCelebrationModal />
+        <ServiceWorkerUpdater />
       </BrowserRouter>
     </ThemeProvider>
   );

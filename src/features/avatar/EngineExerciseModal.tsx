@@ -46,8 +46,12 @@ export function EngineExerciseModal({ exercise, onClose }: EngineExerciseModalPr
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.95, y: 40, opacity: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 26 }}
-            className="rounded-t-2xl sm:rounded-2xl p-5 max-w-md w-full max-h-[90vh] overflow-y-auto"
-            style={{ background: "var(--surface)", border: "1px solid var(--border)" }}
+            className="rounded-t-2xl sm:rounded-2xl p-5 pb-8 max-w-md w-full max-h-[90dvh] overflow-y-auto"
+            style={{
+              background: "var(--surface)",
+              border: "1px solid var(--border)",
+              paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 2rem)",
+            }}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between mb-3">
