@@ -1,0 +1,25 @@
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --surface-2: #0f1729;
+  --border: #334155;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --accent: #60a5fa;
+
+  --tier-iron: #94a3b8;
+  --tier-bronze: #d97706;
+  --tier-silver: #cbd5e1;
+  --tier-gold: #fbbf24;
+  --tier-platinum: #2dd4bf;
+  --tier-diamond: #60a5fa;
+  --tier-mythic: #a78bfa;
+  --tier-legend: #f472b6;
+
+  --tier-untrained: #334155;
+
+  --avatar-skin: #475569;
+  --avatar-stroke: #94a3b8;
+  --region-base: #334155;
+}

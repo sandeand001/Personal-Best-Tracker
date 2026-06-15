@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .avatar-region { fill: var(--region-base, #cbd5e1); stroke: var(--avatar-stroke, #475569); stroke-width: 1.5; transition: fill 200ms ease; cursor: pointer; }
+      .avatar-region:hover { filter: brightness(1.15); }
+      .avatar-deco { fill: var(--avatar-skin, #94a3b8); stroke: var(--avatar-stroke, #475569); stroke-width: 1.5; }
+    </style>
+  </defs>
+  <!-- head (back) -->
+  <circle class="avatar-deco" cx="100" cy="38" r="22" />
+  <!-- neck -->
+  <rect class="avatar-deco" x="92" y="58" width="16" height="14" />
+  <!-- shoulders (rear delts + traps) -->
+  <path class="avatar-region" data-region="shoulders" d="M58,72 Q70,68 80,76 L78,114 L52,108 Q48,86 58,72 Z M142,72 Q130,68 120,76 L122,114 L148,108 Q152,86 142,72 Z" />
+  <!-- back (lats + upper back + lower back) -->
+  <path class="avatar-region" data-region="back" d="M80,76 L120,76 L122,206 Q100,212 78,206 Z" />
+  <!-- arms (triceps) -->
+  <path class="avatar-region" data-region="arms" d="M52,108 L78,114 L74,180 L46,174 Q40,140 52,108 Z M148,108 L122,114 L126,180 L154,174 Q160,140 148,108 Z" />
+  <!-- legs (glutes + hamstrings + calves) -->
+  <path class="avatar-region" data-region="legs" d="M80,206 Q100,212 100,212 L100,372 L74,372 Q70,300 80,206 Z M120,206 Q100,212 100,212 L100,372 L126,372 Q130,300 120,206 Z" />
+  <!-- forearms (decorative) -->
+  <path class="avatar-deco" d="M46,174 L74,180 L72,228 L44,224 Z M154,174 L126,180 L128,228 L156,224 Z" />
+  <!-- hands -->
+  <ellipse class="avatar-deco" cx="58" cy="240" rx="14" ry="11" />
+  <ellipse class="avatar-deco" cx="142" cy="240" rx="14" ry="11" />
+  <!-- feet (heels) -->
+  <ellipse class="avatar-deco" cx="84" cy="384" rx="14" ry="9" />
+  <ellipse class="avatar-deco" cx="116" cy="384" rx="14" ry="9" />
+</svg>

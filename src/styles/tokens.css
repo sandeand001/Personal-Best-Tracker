@@ -1,0 +1,66 @@
+/* Theme tokens — base layer. Per-theme overrides in themes/*.css */
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --accent: #2563eb;
+
+  /* Tier palette */
+  --tier-iron: #6b7280;
+  --tier-bronze: #b45309;
+  --tier-silver: #94a3b8;
+  --tier-gold: #d97706;
+  --tier-platinum: #14b8a6;
+  --tier-diamond: #2563eb;
+  --tier-mythic: #7c3aed;
+  --tier-legend: #db2777;
+
+  --tier-untrained: #cbd5e1;
+
+  /* Avatar */
+  --avatar-skin: #94a3b8;
+  --avatar-stroke: #475569;
+  --region-base: #cbd5e1;
+
+  /* Glow */
+  --glow-strength: 0;
+
+  /* Fonts */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-sans);
+
+  /* Decorative overlays */
+  --overlay-image: none;
+  --overlay-opacity: 0;
+}
+
+html, body { background: var(--bg); color: var(--text); font-family: var(--font-sans); }
+body { margin: 0; min-height: 100vh; }
+
+button, input, select { font-family: inherit; }
+
+/* Tier color util classes */
+.tier-iron { color: var(--tier-iron); }
+.tier-bronze { color: var(--tier-bronze); }
+.tier-silver { color: var(--tier-silver); }
+.tier-gold { color: var(--tier-gold); }
+.tier-platinum { color: var(--tier-platinum); }
+.tier-diamond { color: var(--tier-diamond); }
+.tier-mythic { color: var(--tier-mythic); }
+.tier-legend { color: var(--tier-legend); }
+
+/* Theme decorative overlay layer */
+.theme-overlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: var(--overlay-image);
+  opacity: var(--overlay-opacity);
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+}

@@ -1,0 +1,2 @@
+/* Light theme inherits the :root defaults from tokens.css */
+[data-theme="light"] { color-scheme: light; }

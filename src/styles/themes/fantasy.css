@@ -1,0 +1,42 @@
+[data-theme="fantasy"] {
+  color-scheme: light;
+  --bg: #f5e6c8;
+  --surface: #fdf6e3;
+  --surface-2: #ebd9b3;
+  --border: #b8946a;
+  --text: #3d2817;
+  --text-muted: #6b4d2e;
+  --accent: #8b4513;
+
+  --tier-iron: #5a4a3a;
+  --tier-bronze: #cd7f32;
+  --tier-silver: #a8a8a8;
+  --tier-gold: #ffd700;
+  --tier-platinum: #4a90b8;
+  --tier-diamond: #5dade2;
+  --tier-mythic: #6a0dad;
+  --tier-legend: #8b0000;
+
+  --tier-untrained: #c9b896;
+
+  --avatar-skin: #b8946a;
+  --avatar-stroke: #3d2817;
+  --region-base: #c9b896;
+
+  --font-display: 'Cinzel', 'Trajan Pro', Georgia, serif;
+
+  --overlay-image: radial-gradient(circle at 50% 50%,
+    transparent 60%,
+    rgba(61, 40, 23, 0.15) 100%);
+  --overlay-opacity: 0.8;
+}
+
+[data-theme="fantasy"] body {
+  background:
+    repeating-radial-gradient(circle at 20% 30%,
+      transparent 0,
+      rgba(184, 148, 106, 0.04) 1px,
+      transparent 3px),
+    var(--bg);
+  background-attachment: fixed;
+}
