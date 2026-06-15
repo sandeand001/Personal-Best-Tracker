@@ -1,44 +1,98 @@
+/* Techno theme — phosphor-green hacker console / 80s CRT terminal aesthetic.
+   Pure black background, glowing green text, monospace everywhere, scanlines. */
+
 [data-theme="techno"] {
   color-scheme: dark;
-  --bg: #050714;
-  --surface: #0a0e1f;
-  --surface-2: #0d1326;
-  --border: #1e293b;
-  --text: #e0f2fe;
-  --text-muted: #64748b;
-  --accent: #00d9ff;
 
-  --tier-iron: #475569;
-  --tier-bronze: #ff6b35;
-  --tier-silver: #94a3b8;
-  --tier-gold: #ffd60a;
-  --tier-platinum: #00ff9f;
-  --tier-diamond: #00d9ff;
-  --tier-mythic: #d442f5;
-  --tier-legend: #ff0080;
+  --bg: #000000;
+  --surface: #001100;
+  --surface-2: #001a00;
+  --border: #00ff33;
+  --text: #33ff66;
+  --text-muted: #008822;
+  --accent: #00ff33;
 
-  --tier-untrained: #1e293b;
+  /* CRT-era tier palette: amber, green, cyan, magenta — classic phosphor + CGA highlights */
+  --tier-iron:     #336633;
+  --tier-bronze:   #ff8800;
+  --tier-silver:   #aaffaa;
+  --tier-gold:     #ffcc00;
+  --tier-platinum: #00ffff;
+  --tier-diamond:  #00aaff;
+  --tier-mythic:   #ff00ff;
+  --tier-legend:   #ffffff;
 
-  --avatar-skin: #1e293b;
-  --avatar-stroke: #00d9ff;
-  --region-base: #0d1326;
+  --tier-untrained: #003300;
+
+  --avatar-skin: #002200;
+  --avatar-stroke: #00ff33;
+  --region-base: #003300;
 
   --glow-strength: 1;
 
-  --font-display: 'Orbitron', ui-monospace, monospace;
+  --font-sans: 'VT323', 'Courier New', 'Consolas', 'Monaco', monospace;
+  --font-display: 'VT323', 'Courier New', 'Consolas', 'Monaco', monospace;
 
-  --overlay-image: linear-gradient(transparent 95%, rgba(0, 217, 255, 0.04) 100%),
-    linear-gradient(90deg, transparent 95%, rgba(0, 217, 255, 0.04) 100%);
-  --overlay-opacity: 0.6;
+  /* Scanline overlay — horizontal lines every 3px */
+  --overlay-image: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 51, 0.06) 0px,
+    rgba(0, 255, 51, 0.06) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  --overlay-opacity: 1;
 }
 
 [data-theme="techno"] body {
   background:
-    radial-gradient(ellipse at top, rgba(0, 217, 255, 0.08), transparent 50%),
-    var(--bg);
+    radial-gradient(ellipse at 50% 0%, rgba(0, 255, 51, 0.08), transparent 60%),
+    #000000;
   background-attachment: fixed;
+  text-shadow: 0 0 4px currentColor;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
 }
 
-[data-theme="techno"] .theme-overlay::before {
-  background-size: 30px 30px;
+[data-theme="techno"] h1,
+[data-theme="techno"] h2,
+[data-theme="techno"] h3 {
+  text-shadow: 0 0 6px currentColor, 0 0 12px currentColor;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+[data-theme="techno"] button,
+[data-theme="techno"] input,
+[data-theme="techno"] select {
+  text-transform: uppercase;
+}
+
+[data-theme="techno"] [class*="border"] {
+  box-shadow: 0 0 4px rgba(0, 255, 51, 0.3), inset 0 0 8px rgba(0, 255, 51, 0.05);
+}
+
+/* CRT vignette */
+[data-theme="techno"]::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 30;
+  mix-blend-mode: multiply;
+}
+
+@keyframes crt-flicker {
+  0%, 95%, 100% { opacity: 1; }
+  96% { opacity: 0.85; }
+  97% { opacity: 1; }
+  98% { opacity: 0.92; }
+}
+[data-theme="techno"] main {
+  animation: crt-flicker 8s infinite;
 }
