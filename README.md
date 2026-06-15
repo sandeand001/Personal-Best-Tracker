@@ -1,73 +1,48 @@
-# React + TypeScript + Vite
+# PR Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Gamified PWA for personal-record tracking in strength and cardio.
 
-Currently, two official plugins are available:
+The body is a character sheet. PRs are the only currency. Each muscle region (Chest, Back, Shoulders, Arms, Legs, Core, Engine) has its own population-percentile stat with an 8-tier ladder (Iron → Legend). 4 themes (Light, Dark, Techno, Fantasy). 100% local-only via IndexedDB. Installable PWA, fully offline.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Run locally
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+App at <http://localhost:5173/pr-tracker/>.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Test & build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+npm test            # vitest, ~72 tests
+npm run build       # type-check + production bundle
+npm run build:pages # production bundle + 404.html SPA fallback for GitHub Pages
 ```
+
+## Deploy to GitHub Pages
+
+1. Push the repo to GitHub.
+2. Repository Settings → Pages → **Source = "GitHub Actions"**.
+3. Push to `main` (or `master`); the workflow at `.github/workflows/deploy.yml` builds and deploys.
+4. Live at `https://<username>.github.io/pr-tracker/`.
+
+If you change the repo name from `pr-tracker`, update the `base` in `vite.config.ts` and the `start_url`/`scope` in the PWA manifest.
+
+## Custom domain
+
+Add `public/CNAME` containing your domain, then change `vite.config.ts` `base` from `/pr-tracker/` to `/`, and update PWA `start_url`/`scope` likewise.
+
+## Architecture
+
+- `src/domain/` — pure TypeScript: tiers, Epley, percentile lookup, PR detection, region rollup, balance, achievement rules. No React or Dexie imports. Fully unit-tested.
+- `src/data/` — Dexie (IndexedDB) schema, repos, JSON export/import, seeded exercises + achievements + stub percentile tables.
+- `src/app/` — store (Zustand), PR builder, theme provider, layout.
+- `src/features/` — vertical slices: avatar, log-pr, region, exercise, achievements, history, settings, pr-celebration.
+- `src/components/` — shared UI primitives (StatBar, TierBadge, AvatarSVG).
+- `src/styles/` — theme tokens + 4 theme CSS files.
+
+## Stub percentile tables
+
+The bundled percentile reference tables (`src/data/seed/stub-percentiles.ts`) are **informed placeholders**, not verified population data. Replacing them with real distributions (OpenPowerlifting, Concept2 logbook, race results, FTP community data) is the v2 research deliverable. Stubs use 3 anchor points each; real tables can land as a JSON-only update without code changes.
