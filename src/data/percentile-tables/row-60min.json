@@ -3,62 +3,62 @@
   "direction": "asc",
   "points": [
     {
-      "value": 6720.0,
-      "percentile": 1
+      "value": 10000.0,
+      "percentile": 1.0
     },
     {
-      "value": 8640.0,
-      "percentile": 5
+      "value": 11500.0,
+      "percentile": 5.0
     },
     {
-      "value": 9600.0,
-      "percentile": 10
+      "value": 12500.0,
+      "percentile": 10.0
     },
     {
-      "value": 10752.0,
-      "percentile": 20
+      "value": 13500.0,
+      "percentile": 20.0
     },
     {
-      "value": 11520.0,
-      "percentile": 30
+      "value": 14000.0,
+      "percentile": 30.0
     },
     {
-      "value": 12096.0,
-      "percentile": 40
+      "value": 14400.0,
+      "percentile": 40.0
     },
     {
-      "value": 12672.0,
-      "percentile": 50
+      "value": 14750.0,
+      "percentile": 50.0
     },
     {
-      "value": 13152.0,
-      "percentile": 60
+      "value": 15050.0,
+      "percentile": 60.0
     },
     {
-      "value": 13632.0,
-      "percentile": 70
+      "value": 15350.0,
+      "percentile": 70.0
     },
     {
-      "value": 14112.0,
-      "percentile": 80
+      "value": 15650.0,
+      "percentile": 80.0
     },
     {
-      "value": 14784.0,
-      "percentile": 90
+      "value": 15950.0,
+      "percentile": 90.0
     },
     {
-      "value": 15264.0,
-      "percentile": 95
+      "value": 16200.0,
+      "percentile": 95.0
     },
     {
-      "value": 16032.0,
-      "percentile": 99
+      "value": 16600.0,
+      "percentile": 99.0
     },
     {
-      "value": 16896.0,
+      "value": 17100.0,
       "percentile": 99.9
     }
   ],
-  "source": "Derived: 60-min \u2248 1.92\u00d7 30-min meters (slight pace decay).",
+  "source": "Concept2 World Ranking 60-min meters covered.",
   "confidence": "curated"
 }

@@ -3,62 +3,62 @@
   "direction": "asc",
   "points": [
     {
-      "value": 70.0,
-      "percentile": 1
+      "value": 110.0,
+      "percentile": 1.0
     },
     {
-      "value": 105.0,
-      "percentile": 5
+      "value": 160.0,
+      "percentile": 5.0
     },
     {
-      "value": 133.0,
-      "percentile": 10
+      "value": 190.0,
+      "percentile": 10.0
     },
     {
-      "value": 168.0,
-      "percentile": 20
+      "value": 220.0,
+      "percentile": 20.0
     },
     {
-      "value": 196.0,
-      "percentile": 30
+      "value": 245.0,
+      "percentile": 30.0
     },
     {
-      "value": 217.0,
-      "percentile": 40
+      "value": 265.0,
+      "percentile": 40.0
     },
     {
-      "value": 238.0,
-      "percentile": 50
+      "value": 285.0,
+      "percentile": 50.0
     },
     {
-      "value": 259.0,
-      "percentile": 60
+      "value": 305.0,
+      "percentile": 60.0
     },
     {
-      "value": 287.0,
-      "percentile": 70
+      "value": 325.0,
+      "percentile": 70.0
     },
     {
-      "value": 322.0,
-      "percentile": 80
+      "value": 355.0,
+      "percentile": 80.0
     },
     {
-      "value": 371.0,
-      "percentile": 90
+      "value": 390.0,
+      "percentile": 90.0
     },
     {
-      "value": 420.0,
-      "percentile": 95
+      "value": 425.0,
+      "percentile": 95.0
     },
     {
-      "value": 490.0,
-      "percentile": 99
+      "value": 470.0,
+      "percentile": 99.0
     },
     {
-      "value": 560.0,
+      "value": 520.0,
       "percentile": 99.9
     }
   ],
-  "source": "Derived: 5-min peak \u2248 1.4\u00d7 FTP. Underlying FTP from ACSM-aligned norms.",
+  "source": "Curated: 5-min peak power for trained cyclists (raw watts).",
   "confidence": "curated"
 }

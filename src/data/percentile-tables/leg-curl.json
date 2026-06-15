@@ -3,62 +3,62 @@
   "direction": "asc",
   "points": [
     {
-      "value": 19.69,
+      "value": 4.08,
       "percentile": 1
     },
     {
-      "value": 23.9,
+      "value": 4.08,
       "percentile": 5
     },
     {
-      "value": 26.25,
+      "value": 25.0,
       "percentile": 10
     },
     {
-      "value": 30.31,
+      "value": 33.94,
       "percentile": 20
     },
     {
-      "value": 32.41,
+      "value": 42.61,
       "percentile": 30
     },
     {
-      "value": 34.08,
+      "value": 49.93,
       "percentile": 40
     },
     {
-      "value": 36.25,
+      "value": 57.64,
       "percentile": 50
     },
     {
-      "value": 38.39,
+      "value": 66.65,
       "percentile": 60
     },
     {
-      "value": 40.99,
+      "value": 77.47,
       "percentile": 70
     },
     {
-      "value": 43.8,
+      "value": 89.75,
       "percentile": 80
     },
     {
-      "value": 48.29,
+      "value": 112.76,
       "percentile": 90
     },
     {
-      "value": 52.85,
+      "value": 126.61,
       "percentile": 95
     },
     {
-      "value": 57.94,
+      "value": 189.83,
       "percentile": 99
     },
     {
-      "value": 65.78,
+      "value": 189.83,
       "percentile": 99.9
     }
   ],
-  "source": "ACSM Guidelines for Exercise Testing & Prescription / NSCA Essentials norms for healthy adults age 30-39, sex-pooled 50/50; raw weight anchored at US adult average bodyweight (M=90.7 kg, F=77.6 kg); non-bench lifts derived via standard strength-training ratios (Rippetoe, NSCA).",
-  "confidence": "curated"
+  "source": "Strength Level community standards (https://strengthlevel.com/strength-standards/lying-leg-curl/lb); male+female pooled 80/20, raw weight (not bodyweight-normalized); underlying data: 48M+ user-submitted lifts. Tier anchors: Beg=5th, Nov=20th, Int=50th, Adv=80th, Elite=95th.",
+  "confidence": "verified"
 }

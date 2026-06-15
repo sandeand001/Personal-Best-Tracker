@@ -3,62 +3,62 @@
   "direction": "desc",
   "points": [
     {
-      "value": 15159.25,
-      "percentile": 1
+      "value": 12000.0,
+      "percentile": 1.0
     },
     {
-      "value": 12993.64,
-      "percentile": 5
+      "value": 10200.0,
+      "percentile": 5.0
     },
     {
-      "value": 11910.84,
-      "percentile": 10
+      "value": 9300.0,
+      "percentile": 10.0
     },
     {
-      "value": 10828.03,
-      "percentile": 20
+      "value": 8400.0,
+      "percentile": 20.0
     },
     {
-      "value": 10209.29,
-      "percentile": 30
+      "value": 7800.0,
+      "percentile": 30.0
     },
     {
-      "value": 9667.89,
-      "percentile": 40
+      "value": 7380.0,
+      "percentile": 40.0
     },
     {
-      "value": 9281.17,
-      "percentile": 50
+      "value": 7020.0,
+      "percentile": 50.0
     },
     {
-      "value": 8971.8,
-      "percentile": 60
+      "value": 6600.0,
+      "percentile": 60.0
     },
     {
-      "value": 8662.43,
-      "percentile": 70
+      "value": 6240.0,
+      "percentile": 70.0
     },
     {
-      "value": 8353.05,
-      "percentile": 80
+      "value": 5820.0,
+      "percentile": 80.0
     },
     {
-      "value": 7656.97,
-      "percentile": 90
+      "value": 5340.0,
+      "percentile": 90.0
     },
     {
-      "value": 7192.91,
-      "percentile": 95
+      "value": 5040.0,
+      "percentile": 95.0
     },
     {
-      "value": 6342.13,
-      "percentile": 99
+      "value": 4560.0,
+      "percentile": 99.0
     },
     {
-      "value": 5517.14,
+      "value": 4080.0,
       "percentile": 99.9
     }
   ],
-  "source": "ACSM cardiovascular fitness norms for adults 30-39 (1.5-mile run percentile times), sex-pooled 50/50; longer distances extrapolated via standard pace decay (~3% per doubling of distance for trained runners, more for untrained).",
+  "source": "Curated from RunRepeat global half-marathon distribution.",
   "confidence": "curated"
 }

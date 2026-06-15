@@ -3,62 +3,62 @@
   "direction": "asc",
   "points": [
     {
-      "value": 4.3,
+      "value": 0.82,
       "percentile": 1
     },
     {
-      "value": 5.21,
+      "value": 0.82,
       "percentile": 5
     },
     {
-      "value": 5.73,
+      "value": 4.7,
       "percentile": 10
     },
     {
-      "value": 6.61,
+      "value": 7.12,
       "percentile": 20
     },
     {
-      "value": 7.07,
+      "value": 9.29,
       "percentile": 30
     },
     {
-      "value": 7.44,
+      "value": 11.51,
       "percentile": 40
     },
     {
-      "value": 7.91,
+      "value": 13.73,
       "percentile": 50
     },
     {
-      "value": 8.38,
+      "value": 16.47,
       "percentile": 60
     },
     {
-      "value": 8.94,
+      "value": 19.64,
       "percentile": 70
     },
     {
-      "value": 9.56,
+      "value": 23.36,
       "percentile": 80
     },
     {
-      "value": 10.54,
+      "value": 31.11,
       "percentile": 90
     },
     {
-      "value": 11.53,
+      "value": 35.84,
       "percentile": 95
     },
     {
-      "value": 12.64,
+      "value": 53.75,
       "percentile": 99
     },
     {
-      "value": 14.35,
+      "value": 53.75,
       "percentile": 99.9
     }
   ],
-  "source": "ACSM Guidelines for Exercise Testing & Prescription / NSCA Essentials norms for healthy adults age 30-39, sex-pooled 50/50; raw weight anchored at US adult average bodyweight (M=90.7 kg, F=77.6 kg); non-bench lifts derived via standard strength-training ratios (Rippetoe, NSCA).",
-  "confidence": "curated"
+  "source": "Strength Level community standards (https://strengthlevel.com/strength-standards/dumbbell-lateral-raise/lb); male+female pooled 80/20, raw weight (not bodyweight-normalized); underlying data: 48M+ user-submitted lifts. Tier anchors: Beg=5th, Nov=20th, Int=50th, Adv=80th, Elite=95th.",
+  "confidence": "verified"
 }

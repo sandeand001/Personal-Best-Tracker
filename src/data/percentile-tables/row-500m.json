@@ -3,62 +3,62 @@
   "direction": "desc",
   "points": [
     {
-      "value": 153.0,
-      "percentile": 1
+      "value": 150.0,
+      "percentile": 1.0
     },
     {
-      "value": 140.25,
-      "percentile": 5
+      "value": 130.0,
+      "percentile": 5.0
     },
     {
-      "value": 130.69,
-      "percentile": 10
+      "value": 118.0,
+      "percentile": 10.0
     },
     {
-      "value": 121.12,
-      "percentile": 20
+      "value": 108.0,
+      "percentile": 20.0
     },
     {
-      "value": 114.75,
-      "percentile": 30
+      "value": 102.0,
+      "percentile": 30.0
     },
     {
-      "value": 110.5,
-      "percentile": 40
+      "value": 98.0,
+      "percentile": 40.0
     },
     {
-      "value": 106.25,
-      "percentile": 50
+      "value": 95.0,
+      "percentile": 50.0
     },
     {
-      "value": 103.06,
-      "percentile": 60
+      "value": 92.0,
+      "percentile": 60.0
     },
     {
-      "value": 99.88,
-      "percentile": 70
+      "value": 89.0,
+      "percentile": 70.0
     },
     {
-      "value": 96.69,
-      "percentile": 80
+      "value": 86.0,
+      "percentile": 80.0
     },
     {
-      "value": 92.44,
-      "percentile": 90
+      "value": 83.0,
+      "percentile": 90.0
     },
     {
-      "value": 89.25,
-      "percentile": 95
+      "value": 81.0,
+      "percentile": 95.0
     },
     {
-      "value": 83.94,
-      "percentile": 99
+      "value": 78.0,
+      "percentile": 99.0
     },
     {
-      "value": 78.62,
+      "value": 75.0,
       "percentile": 99.9
     }
   ],
-  "source": "Derived from 2K row pace \u00d7 distance scaling.",
+  "source": "Concept2 World Ranking 500m percentile data (heavyweight open).",
   "confidence": "curated"
 }

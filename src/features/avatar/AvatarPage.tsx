@@ -73,7 +73,7 @@ export function AvatarPage() {
   return (
     <div className="space-y-4">
       <p className="text-xs text-center" style={{ color: "var(--text-muted)" }}>
-        Percentiles calibrated against healthy adults (ACSM-aligned norms)
+        Percentiles calibrated against active barbell trainers (Strength Level community, 48M+ lifts)
       </p>
       <div className="flex flex-wrap gap-2">
         <Tabs

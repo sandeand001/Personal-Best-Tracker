@@ -3,62 +3,62 @@
   "direction": "desc",
   "points": [
     {
-      "value": 32889.11,
-      "percentile": 1
+      "value": 25200.0,
+      "percentile": 1.0
     },
     {
-      "value": 28190.67,
-      "percentile": 5
+      "value": 21600.0,
+      "percentile": 5.0
     },
     {
-      "value": 25841.45,
-      "percentile": 10
+      "value": 19800.0,
+      "percentile": 10.0
     },
     {
-      "value": 23492.22,
-      "percentile": 20
+      "value": 18000.0,
+      "percentile": 20.0
     },
     {
-      "value": 22149.81,
-      "percentile": 30
+      "value": 17100.0,
+      "percentile": 30.0
     },
     {
-      "value": 20975.2,
-      "percentile": 40
+      "value": 16200.0,
+      "percentile": 40.0
     },
     {
-      "value": 20136.19,
-      "percentile": 50
+      "value": 15300.0,
+      "percentile": 50.0
     },
     {
-      "value": 19464.99,
-      "percentile": 60
+      "value": 14400.0,
+      "percentile": 60.0
     },
     {
-      "value": 18793.78,
-      "percentile": 70
+      "value": 13500.0,
+      "percentile": 70.0
     },
     {
-      "value": 18122.57,
-      "percentile": 80
+      "value": 12600.0,
+      "percentile": 80.0
     },
     {
-      "value": 16612.36,
-      "percentile": 90
+      "value": 11700.0,
+      "percentile": 90.0
     },
     {
-      "value": 15605.55,
-      "percentile": 95
+      "value": 10800.0,
+      "percentile": 95.0
     },
     {
-      "value": 13759.73,
-      "percentile": 99
+      "value": 9600.0,
+      "percentile": 99.0
     },
     {
-      "value": 11969.85,
+      "value": 8400.0,
       "percentile": 99.9
     }
   ],
-  "source": "ACSM cardiovascular fitness norms for adults 30-39 (1.5-mile run percentile times), sex-pooled 50/50; longer distances extrapolated via standard pace decay (~3% per doubling of distance for trained runners, more for untrained).",
+  "source": "Curated from RunRepeat global marathon distribution + NYC/Boston finisher stats.",
   "confidence": "curated"
 }

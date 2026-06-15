@@ -3,62 +3,62 @@
   "direction": "desc",
   "points": [
     {
-      "value": 300,
-      "percentile": 1
+      "value": 180.0,
+      "percentile": 1.0
     },
     {
-      "value": 240,
-      "percentile": 5
+      "value": 150.0,
+      "percentile": 5.0
     },
     {
-      "value": 200,
-      "percentile": 10
+      "value": 135.0,
+      "percentile": 10.0
     },
     {
-      "value": 170,
-      "percentile": 20
+      "value": 118.0,
+      "percentile": 20.0
     },
     {
-      "value": 150,
-      "percentile": 30
+      "value": 108.0,
+      "percentile": 30.0
     },
     {
-      "value": 135,
-      "percentile": 40
+      "value": 100.0,
+      "percentile": 40.0
     },
     {
-      "value": 120,
-      "percentile": 50
+      "value": 94.0,
+      "percentile": 50.0
     },
     {
-      "value": 110,
-      "percentile": 60
+      "value": 88.0,
+      "percentile": 60.0
     },
     {
-      "value": 100,
-      "percentile": 70
+      "value": 83.0,
+      "percentile": 70.0
     },
     {
-      "value": 90,
-      "percentile": 80
+      "value": 78.0,
+      "percentile": 80.0
     },
     {
-      "value": 78,
-      "percentile": 90
+      "value": 72.0,
+      "percentile": 90.0
     },
     {
-      "value": 70,
-      "percentile": 95
+      "value": 67.0,
+      "percentile": 95.0
     },
     {
-      "value": 58,
-      "percentile": 99
+      "value": 60.0,
+      "percentile": 99.0
     },
     {
-      "value": 50,
+      "value": 52.0,
       "percentile": 99.9
     }
   ],
-  "source": "Curated 100m freestyle for healthy adults; broader than masters-swimmer population.",
+  "source": "Curated from USMS national age-group rankings, freestyle.",
   "confidence": "curated"
 }

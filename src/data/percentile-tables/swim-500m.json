@@ -3,62 +3,62 @@
   "direction": "desc",
   "points": [
     {
-      "value": 1650.0,
-      "percentile": 1
+      "value": 900.0,
+      "percentile": 1.0
     },
     {
-      "value": 1320.0,
-      "percentile": 5
+      "value": 720.0,
+      "percentile": 5.0
     },
     {
-      "value": 1100.0,
-      "percentile": 10
+      "value": 640.0,
+      "percentile": 10.0
     },
     {
-      "value": 935.0,
-      "percentile": 20
+      "value": 570.0,
+      "percentile": 20.0
     },
     {
-      "value": 825.0,
-      "percentile": 30
+      "value": 525.0,
+      "percentile": 30.0
     },
     {
-      "value": 742.5,
-      "percentile": 40
+      "value": 490.0,
+      "percentile": 40.0
     },
     {
-      "value": 660.0,
-      "percentile": 50
+      "value": 460.0,
+      "percentile": 50.0
     },
     {
-      "value": 605.0,
-      "percentile": 60
+      "value": 435.0,
+      "percentile": 60.0
     },
     {
-      "value": 550.0,
-      "percentile": 70
-    },
-    {
-      "value": 495.0,
-      "percentile": 80
-    },
-    {
-      "value": 429.0,
-      "percentile": 90
+      "value": 410.0,
+      "percentile": 70.0
     },
     {
       "value": 385.0,
-      "percentile": 95
+      "percentile": 80.0
     },
     {
-      "value": 319.0,
-      "percentile": 99
+      "value": 360.0,
+      "percentile": 90.0
     },
     {
-      "value": 275.0,
+      "value": 340.0,
+      "percentile": 95.0
+    },
+    {
+      "value": 315.0,
+      "percentile": 99.0
+    },
+    {
+      "value": 290.0,
       "percentile": 99.9
     }
   ],
-  "source": "Derived from 100m freestyle pace \u00d7 distance scaling.",
+  "source": "Curated from USMS rankings, freestyle (extrapolated from 500yd).",
   "confidence": "curated"
 }

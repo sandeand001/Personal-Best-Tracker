@@ -3,62 +3,62 @@
   "direction": "asc",
   "points": [
     {
-      "value": 35.81,
+      "value": 5.17,
       "percentile": 1
     },
     {
-      "value": 43.45,
+      "value": 5.17,
       "percentile": 5
     },
     {
-      "value": 47.72,
+      "value": 37.65,
       "percentile": 10
     },
     {
-      "value": 55.1,
+      "value": 55.71,
       "percentile": 20
     },
     {
-      "value": 58.92,
+      "value": 68.72,
       "percentile": 30
     },
     {
-      "value": 61.96,
+      "value": 78.79,
       "percentile": 40
     },
     {
-      "value": 65.91,
+      "value": 89.3,
       "percentile": 50
     },
     {
-      "value": 69.8,
+      "value": 100.01,
       "percentile": 60
     },
     {
-      "value": 74.53,
+      "value": 113.81,
       "percentile": 70
     },
     {
-      "value": 79.64,
+      "value": 127.8,
       "percentile": 80
     },
     {
-      "value": 87.8,
+      "value": 153.43,
       "percentile": 90
     },
     {
-      "value": 96.09,
+      "value": 168.97,
       "percentile": 95
     },
     {
-      "value": 105.35,
+      "value": 253.1,
       "percentile": 99
     },
     {
-      "value": 119.59,
+      "value": 253.1,
       "percentile": 99.9
     }
   ],
-  "source": "ACSM Guidelines for Exercise Testing & Prescription / NSCA Essentials norms for healthy adults age 30-39, sex-pooled 50/50; raw weight anchored at US adult average bodyweight (M=90.7 kg, F=77.6 kg); non-bench lifts derived via standard strength-training ratios (Rippetoe, NSCA).",
-  "confidence": "curated"
+  "source": "Strength Level community standards (https://strengthlevel.com/strength-standards/bench-press/lb); male+female pooled 80/20, raw weight (not bodyweight-normalized); underlying data: 48M+ user-submitted lifts. Tier anchors: Beg=5th, Nov=20th, Int=50th, Adv=80th, Elite=95th.",
+  "confidence": "verified"
 }

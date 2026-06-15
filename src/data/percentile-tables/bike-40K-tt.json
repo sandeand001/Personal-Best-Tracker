@@ -3,62 +3,62 @@
   "direction": "desc",
   "points": [
     {
-      "value": 7178.7,
-      "percentile": 1
+      "value": 6600.0,
+      "percentile": 1.0
     },
     {
-      "value": 6981.3,
-      "percentile": 5
+      "value": 5700.0,
+      "percentile": 5.0
     },
     {
-      "value": 6848.41,
-      "percentile": 10
+      "value": 5100.0,
+      "percentile": 10.0
     },
     {
-      "value": 6703.22,
-      "percentile": 20
+      "value": 4680.0,
+      "percentile": 20.0
     },
     {
-      "value": 6599.56,
-      "percentile": 30
+      "value": 4440.0,
+      "percentile": 30.0
     },
     {
-      "value": 6527.6,
-      "percentile": 40
+      "value": 4200.0,
+      "percentile": 40.0
     },
     {
-      "value": 6459.85,
-      "percentile": 50
+      "value": 4020.0,
+      "percentile": 50.0
     },
     {
-      "value": 6395.76,
-      "percentile": 60
+      "value": 3840.0,
+      "percentile": 60.0
     },
     {
-      "value": 6315.31,
-      "percentile": 70
+      "value": 3660.0,
+      "percentile": 70.0
     },
     {
-      "value": 6221.66,
-      "percentile": 80
+      "value": 3480.0,
+      "percentile": 80.0
     },
     {
-      "value": 6101.35,
-      "percentile": 90
+      "value": 3300.0,
+      "percentile": 90.0
     },
     {
-      "value": 5991.47,
-      "percentile": 95
+      "value": 3180.0,
+      "percentile": 95.0
     },
     {
-      "value": 5849.16,
-      "percentile": 99
+      "value": 3000.0,
+      "percentile": 99.0
     },
     {
-      "value": 5720.86,
+      "value": 2820.0,
       "percentile": 99.9
     }
   ],
-  "source": "Derived from FTP via power-to-speed model.",
+  "source": "Curated: 40K TT times from amateur cycling race results.",
   "confidence": "curated"
 }
